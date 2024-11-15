@@ -55,7 +55,9 @@ less_equal_greater()
 
 # Nov 12, 2024
 
-# 
+# The program defines a function that checks if the value 5 is present in a given list and prints a corresponding message indicating its presence or absence.
+
+
 
 def check_five_in_list(input_list):
     # Check if 5 is in the provided list
@@ -70,6 +72,39 @@ example_list = [1,2,3,4,5,7,8,9,10]
 check_five_in_list(example_list)
 
 
+
+# Emmanuel Cruz
+
+# Nov 12, 2024
+
+#The program defines a function that checks whether a given year is a leap year based on specific criteria related to divisibility by 4, 100, and 400, returning True for leap years and False for non-leap years.
+
+def is_leap_year(year):
+    """Determine if the given year is a leap year."""
+
+    # A year is a leap year if it is divisible by 4
+    if year % 4 == 0:
+        # If it is divisible by 100, it must also be divisible by 400
+        if year % 100 == 0:
+            if year % 400 == 0:
+                return True  # Divisible by 400, so it is a leap year
+            else:
+                return False  # Divisible by 100, but not by 400, so it is not a leap year
+        else:
+            return True  # Divisible by 4 but not by 100, so it is a leap year
+    else:
+        return False  # Not divisible by 4, so it is not a leap year
+
+# Example usage:
+year = 2000
+print(is_leap_year(year))  # Output: True
+
+
+# Emmanuel Cruz
+
+# Nov 12, 2024
+
+# The program defines a function that checks if a game character has collected the necessary items for specific tasks based on a provided task number, while optionally reporting any weaknesses of the character.
 
 #write a function
 import resources
@@ -88,18 +123,31 @@ def view_item(number):
             if item not in resources.Emmanuel.weapons:
                 print(f"Hey, you don't have {item}")
                 return False
-            print("You have evrything you need, good luck!")
+            print("You have everything you need, good luck!")
             return True
     elif number == 2:
         print(['pan'],['groceries'])
+        # for every item on the list that i need, i want to see if it is in my weapons
+        for item in ['pan','groceries']:
+            if item not in resources.Emmanuel.weapons:
+                print(f"Hey, you don't have {item}")
+                return False
+            print("You have everything you need, good luck!")
+            return True
     elif number == 3:
         print(['pen'], ['paper'], ['idea'])
+        # for every item on the list that i need, i want to see if it is in my weapons
+        for item in ['pen', 'paper', 'idea']:
+            if item not in resources.Emmanuel.weapons:
+                print(f"Hey, you don't have {item}")
+                return False
+            print("You have everything you need, good luck!")
+            return True 
 
 
+view_item(3)
 
-view_item(1)
+   
+view_item(3)
 
-    #see printed out: ["pan, groceries"]
-# whether your game character has picked up all the items needed to perform certain tasks and checks against any weaknesses.Confirm checks with print statements. The function will take a number in as an argument. You can match the number to the task below. You don’t have to plan for inputs outside of [1,2,3].
-
-# how do i look in my characters 
+   
