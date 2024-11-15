@@ -24,5 +24,5 @@ player1.nickname = 'Dragon Slayer'
 player1.weapons = ['pan', 'paper', 'idea', 'rope', 'groceries']
 player1.weaknesses = ['slow']
 
-Emmanuel = character("Emmanuel",{'rope,''paper,idea'},{'weak1','weak2 '})
+Emmanuel = character("Emmanuel",{'rope','paper','idea'},{'weak1','weak2 '})
 print(f"My weapons are {Emmanuel.weapons}")
